@@ -1,11 +1,14 @@
-function ShowSection(id) {
-  // Ocultar todas las secciones
-  var secciones = document.getElementsByClassName("Info_menu");
-  for (var i = 0; i < secciones.length; i++) {
-    secciones[i].classList.remove("Show");
-  }
+window.addEventListener("load", function () {
+  const portada = document.getElementById("portada");
+  const home = document.getElementById("Presentation");
 
-  // Mostrar solo la sección seleccionada
-  var seleccionada = document.getElementById(id);
-  seleccionada.classList.add("Show");
-}
+  // Mostrar portada
+  portada.classList.add("Show");
+
+  // Después de 3 segundos, desaparecer portada y mostrar Home
+  setTimeout(() => {
+    portada.classList.add("hidden"); // se oculta completamente
+    home.classList.add("Show");
+    document.body.classList.add("loaded"); // activa header/footer
+  }, 3000);
+});

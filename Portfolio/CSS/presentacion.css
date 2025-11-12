@@ -1,0 +1,13 @@
+#Presentation{
+    height: 50vh;
+    width: 50vw;
+    
+}
+.Myself{
+    border-color: black;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
